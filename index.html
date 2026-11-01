@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Sports Team Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>PlayLocal</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#teams">Teams</a>
+            <a href="#matches">Matches</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Find Your Team. Play Your Game.</h1>
+        <p>Connect with local players, join sports teams, and organize matches.</p>
+        <a href="#teams" class="btn">Explore Teams</a>
+    </section>
+
+    <section class="container" id="teams">
+        <h2>Find Your Team</h2>
+
+        <input type="text" id="search" placeholder="Search for a team...">
+
+        <select id="sportFilter">
+            <option value="All">All Sports</option>
+            <option value="Football">Football</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Badminton">Badminton</option>
+        </select>
+
+        <div class="team-container" id="teamList"></div>
+    </section>
+
+    <section class="container matches" id="matches">
+        <h2>Schedule a Match</h2>
+
+        <form id="matchForm">
+            <input type="text" id="matchName"
+                   placeholder="Match name" required>
+
+            <select id="matchSport" required>
+                <option value="Football">Football</option>
+                <option value="Cricket">Cricket</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Badminton">Badminton</option>
+            </select>
+
+            <input type="date" id="matchDate" required>
+            <input type="time" id="matchTime" required>
+
+            <input type="text" id="matchLocation"
+                   placeholder="Match location" required>
+
+            <button type="submit" class="btn">Create Match</button>
+        </form>
+
+        <h2>Upcoming Matches</h2>
+        <div id="matchList"></div>
+    </section>
+
+    <footer>
+        <p> PlayLocal | Local Sports Community</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
